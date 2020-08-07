@@ -1,0 +1,10 @@
+// Abstracts like mixins and variables
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+// Vendors
+@import '../../../node_modules/minireset.css/minireset.sass';
+// Base styles
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/general';
+@import 'base/animations';

@@ -1,0 +1,94 @@
+$font-size-standard-mobile: 17px;
+$font-size-standard: 18px;
+
+$font-size-xxxs: 0.5rem;
+$font-size-xxs: 0.675rem;
+$font-size-xs: 0.75rem;
+$font-size-s: 0.875rem;
+$font-size-m: 1rem;
+$font-size-l: 1.25rem;
+$font-size-xl: 1.75rem;
+$font-size-xxl: 2.5rem;
+
+$line-height-standard: 1.5;
+$line-height-headlines: 1.2;
+
+$font-family-standard: 'Open Sans', sans-serif;
+
+$transition-curve: cubic-bezier(0.3, 0, 0.3, 0.9);
+$transition-speed-fast: 300ms;
+$transition-speed-x-fast: 350ms;
+$transition-speed-normal: 500ms;
+$transition-speed-slow: 700ms;
+
+$spacing-xs: 5px;
+$spacing-s: 10px;
+$spacing-m: 20px;
+$spacing-l: 40px;
+$spacing-xl: 80px;
+$spacing-xxl: 100px;
+$spacing-standard: $spacing-m;
+
+$z-index-xs: 10;
+$z-index-s: 20;
+$z-index-m: 30;
+$z-index-l: 40;
+$z-index-xl: 50;
+$z-index-xxl: 60;
+
+$border-radius-small: 4px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
+
+$height-top-bar: 65px;
+$height-bottom-bar: 60px;
+$height-input: 63px;
+
+
+// Regular Smartphones - for example: iPhone 6/7/8, Samsung Galaxy S9/S10
+$breakpoint-xxs: 321px;
+
+// Large Smartphones - for example: iPhone 6 Plus/7 Plus/8 Plus, Samsung Galaxy S9 Plus/S10 Plus
+$breakpoint-xs: 374px;
+
+// Extra-Large Smartphones/ Small Tablets - for example: Samsung Galaxy Tab 3 8.0, Kindle Fire HD, Kindle Fire 2
+$breakpoint-s: 480px;
+
+// Tablets - for example: Apple iPad 2/3/4, Apple iPad min
+$breakpoint-m: 760px;
+
+// Small Notebooks - for example: Apple Macbook Air 13' 2018, Apple Macbook Pro 13' 2017
+$breakpoint-l: 1100px;
+
+// Notebooks, Small Desktop Computer - for example: Apple Macbook Pro 15' 2017
+$breakpoint-xl: 1290px;
+
+// Desktop Computer - for example: Apple iMac 27'
+$breakpoint-xxl: 1600px;
+
+// Element specific breakpoints
+$breakpoint-help: 1800px;
+
+// Is used by breakpoint manager
+$breakpoints: (
+  'xxs': (min-width: $breakpoint-xxs),
+  'xs': (min-width: $breakpoint-xs),
+  's': (min-width: $breakpoint-s),
+  'm': (min-width: $breakpoint-m),
+  'l': (min-width: $breakpoint-l),
+  'xl': (min-width: $breakpoint-xl),
+  'xxl': (min-width: $breakpoint-xxl),
+  'help': (min-width: $breakpoint-help)
+);
+
+// Export for javascript
+:export {
+  xxs: $breakpoint-xxs;
+  xs: $breakpoint-xs;
+  s: $breakpoint-s;
+  m: $breakpoint-m;
+  l: $breakpoint-l;
+  xl: $breakpoint-xl;
+  xxl: $breakpoint-xxl;
+  help: $breakpoint-help;
+}
