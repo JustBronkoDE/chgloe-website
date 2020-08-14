@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@splidejs/splide": "^2.4.10",
     "core-js": "^3.6.5",
     "minireset.css": "0.0.6",
     "vue": "^2.6.11",
