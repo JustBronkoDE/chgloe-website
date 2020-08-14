@@ -1,7 +1,7 @@
 <template>
-    <div class="impress">
+    <section class="impress">
         Impressum
-    </div>
+    </section>
 </template>
 
 <script>

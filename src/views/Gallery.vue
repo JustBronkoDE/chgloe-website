@@ -1,7 +1,7 @@
 <template>
-    <div class="gallery">
+    <section class="gallery">
         Galerie
-    </div>
+    </section>
 </template>
 
 <script>

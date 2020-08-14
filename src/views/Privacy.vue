@@ -1,7 +1,7 @@
 <template>
-    <div class="privacy-policy">
+    <section class="privacy-policy">
         Datenschutz
-    </div>
+    </section>
 </template>
 
 <script>

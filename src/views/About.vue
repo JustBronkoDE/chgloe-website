@@ -1,7 +1,7 @@
 <template>
-    <div class="about">
+    <section class="about">
         Über mich
-    </div>
+    </section>
 </template>
 
 <script>
