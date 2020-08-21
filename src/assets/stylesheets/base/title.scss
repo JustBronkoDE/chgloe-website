@@ -1,0 +1,20 @@
+.title {
+    font-size: $font-size-xxl;
+    
+}
+
+.title--spacing-bottom {
+    margin-bottom: $spacing-s;
+}
+
+.title--s {
+    font-size: $font-size-xl;
+}
+
+.title--bold {
+    font-weight: bold;
+}
+
+.title--light {
+    color: $color-primary;
+}

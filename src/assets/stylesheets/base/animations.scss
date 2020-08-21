@@ -1,0 +1,16 @@
+.slide-right-enter-active {
+    animation: slide-in-right $transition-speed-normal;
+}
+
+.slide-right-leave-active {
+    animation: slide-in-right $transition-speed-normal reverse;
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

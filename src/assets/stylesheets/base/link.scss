@@ -1,0 +1,9 @@
+.link {
+    cursor: pointer;
+    transition: all $transition-speed-fast $transition-curve;
+    filter: invert(15%);
+
+    &:hover {
+        filter: invert(0%);
+    }
+}
