@@ -1,9 +1,12 @@
 <template>
-  <div id="app">
-    <Header />
-    <router-view />
-    <Footer />
-    <ContactMenu :opened="contactMenuOpened" />
+  <div class="chgloe" id="chgloe">
+    <div class="chgloe__inner" :class="{'chgloe__inner--darkend': contactMenuOpened}">
+      <Header />
+      <router-view />
+      <Footer @contactMenuToggle="toggleContactMenu()" />
+    </div>
+    
+    <ContactMenu @contactMenuToggle="toggleContactMenu()" :opened="contactMenuOpened" />
   </div>
 </template>
 
@@ -38,12 +41,18 @@
 <style lang="scss">
   @import "assets/stylesheets/main.scss";
 
-  #app {
+  .chgloe__inner {
     width: 100%;
     height: 100vh;
     padding: $spacing-l;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: filter $transition-speed-normal $transition-curve;
+  }
+
+  .chgloe__inner--darkend {
+    filter: brightness(0.5);
+    pointer-events: none;
   }
 </style>

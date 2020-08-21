@@ -14,7 +14,7 @@
         justify-content: center;
         height: 20%;
         width: 100%;
-        padding-bottom: $spacing-m;
+        padding-bottom: $spacing-standard;
     }
 
     .header__logo {
