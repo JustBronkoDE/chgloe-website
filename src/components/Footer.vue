@@ -24,7 +24,7 @@
 
 <style lang="scss" scoped>
     .footer {
-        height: 5%;
+        height: $height-footer;
         width: 100%;
         position: relative;
 

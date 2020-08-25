@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
     .home {
-        height: 75%;
+        height: $height-main-content;
         width: 100%;
     }
 </style>

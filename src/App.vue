@@ -49,6 +49,7 @@
     flex-direction: column;
     align-items: center;
     transition: filter $transition-speed-normal $transition-curve;
+    color: $color-light;
   }
 
   .chgloe__inner--darkend {

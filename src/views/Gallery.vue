@@ -12,6 +12,7 @@
 
 <style lang="scss" scoped>
     .gallery {
-
+        height: $height-main-content;
+        width: 100%;
     }
 </style>

@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 20%;
+        height: $height-header;
         width: 100%;
         padding-bottom: $spacing-standard;
     }
