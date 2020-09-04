@@ -174,7 +174,6 @@
 
     .gallery__item {
         flex-grow: 1;
-        min-width: 25%;
         overflow: hidden;
 
         &:not(:last-child) {
