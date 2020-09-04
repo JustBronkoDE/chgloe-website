@@ -48,8 +48,8 @@
     }
 
     .footer__contact-menu-toggle {
-        background: none;
-        color: $color-primary;
+        background: $color-primary;
+        color: $color-dark;
         border: none;
         font-weight: bold;
         font-size: $font-size-l;

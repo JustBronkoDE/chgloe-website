@@ -50,6 +50,8 @@
     align-items: center;
     transition: filter $transition-speed-normal $transition-curve;
     color: $color-light;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 
   .chgloe__inner--darkend {
