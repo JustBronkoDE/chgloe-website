@@ -34,7 +34,7 @@
 
                 for (let row = 0; row < 5; row++) {
                     let imageRow = [];
-                    for (let column = 0; column < Math.floor(Math.random() * 6) + 2  ; column++) {
+                    for (let column = 0; column < Math.floor(Math.random() * 5) + 2  ; column++) {
                         // Only for test purposes
                         const width = sizes[Math.floor(Math.random() * sizes.length)]
                         const height = sizes[Math.floor(Math.random() * sizes.length)]
@@ -155,7 +155,7 @@
         }
 
         &:last-child {
-            margin-bottom: $spacing-xl;   
+            margin-bottom: $spacing-l;   
         }
     }
 
