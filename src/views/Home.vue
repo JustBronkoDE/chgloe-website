@@ -4,7 +4,7 @@
     </main>
 </template>
 
-<script>
+<script lang="ts">
     import HomeMenu from '@/components/HomeMenu.vue';
 
     export default {

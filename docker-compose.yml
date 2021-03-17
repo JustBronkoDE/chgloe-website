@@ -18,8 +18,8 @@ services:
     tty: true
     working_dir: /var/www/html
     ports:
-      - "8585:8080"
-      - "8586:5000"
+      - "8787:8080"
+      - "8587:5000"
     volumes:
       - ./:/var/www/html:delegated
     restart: always

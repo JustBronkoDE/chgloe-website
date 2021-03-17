@@ -1,18 +1,5 @@
 <template>
-    <section class="about">
-        Über mich
-    </section>
+  <div class="about">
+    <h1>This is an about page</h1>
+  </div>
 </template>
-
-<script>
-    export default {
-        
-    }
-</script>
-
-<style lang="scss" scoped>
-    .about {
-        height: $height-main-content;
-        width: 100%;
-    }
-</style>

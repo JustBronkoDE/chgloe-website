@@ -4,12 +4,6 @@
     </section>
 </template>
 
-<script>
-    export default {
-        
-    }
-</script>
-
 <style lang="scss" scoped>
     .privacy-policy  {
         height: $height-main-content;

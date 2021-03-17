@@ -28,8 +28,10 @@
     </transition>
 </template>
 
-<script>
-    export default {
+<script lang="ts">
+    import { defineComponent } from 'vue';
+    
+    export default defineComponent({
         props: {
             opened: Boolean
         },
@@ -39,7 +41,7 @@
                 this.$emit('contactMenuToggle');
             }
         },
-    }
+    })
 </script>
 
 <style lang="scss" scoped>

@@ -18,8 +18,10 @@
     </section>
 </template>
 
-<script>
-    export default {
+<script lang="ts">
+    import { defineComponent } from 'vue';
+
+    export default defineComponent({
         mounted() {
             this.focusRowInViewport();
         },
@@ -63,7 +65,7 @@
                     }
                 }
             },
-            isElementInViewport(element) {
+            isElementInViewport(element: Element) {
                 var rect = element.getBoundingClientRect();
                 return (
                     rect.top >= 0 &&
@@ -73,7 +75,7 @@
                 );
             },
         },
-    }
+    })
 </script>
 
 <style lang="scss" scoped>

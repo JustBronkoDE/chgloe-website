@@ -12,14 +12,16 @@
     </footer>
 </template>
 
-<script>
-    export default {
+<script lang="ts">
+    import { defineComponent } from 'vue';
+    
+    export default defineComponent({
         methods: {
             toggleContactMenu() {
                 this.$emit('contactMenuToggle');
             }
         }
-    }
+    })
 </script>
 
 <style lang="scss" scoped>
