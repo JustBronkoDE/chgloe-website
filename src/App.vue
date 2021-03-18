@@ -39,7 +39,7 @@
 
     .chgloe__inner {
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
         padding: $spacing-l;
         display: flex;
         flex-direction: column;

@@ -82,17 +82,20 @@
 
 <style lang="scss" scoped>
     .gallery {
-        height: $height-main-content;
         width: 100%;
         position: relative;
         animation: fade-in 1s;
     }
 
     .gallery__categories {
+        top: 0;
+        background-color: $color-background;
+        z-index: $z-index-s;
+        position: sticky;
         display: flex;
         justify-content: center;
         list-style: none;
-        margin: $spacing-l 0;
+        padding: $spacing-l 0;
 
         li {
             &:not(:last-child) {
@@ -101,12 +104,7 @@
         }
     }
 
-    .gallery__grid {
-        height: 100%;
-        /* Hide scrollbar for IE, Edge and Firefox */
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-        
+    .gallery__grid {        
         &::before {
             content: '';
             position: absolute;

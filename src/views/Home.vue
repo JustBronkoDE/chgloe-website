@@ -34,14 +34,14 @@
 <style lang="scss" scoped>
     .home {
         padding-top: $spacing-standard;
-        height: $height-main-content;
+        height: $height-home;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-        .home__menu {
+    .home__menu {
         display: flex;
         align-items: center;
         height: 100%;
@@ -50,7 +50,7 @@
     }
 
     .home__menu-item {
-        height: 95%;
+        height: 80%;
         margin-right: $spacing-standard;
         cursor: pointer;
         transition: height $transition-speed-fast $transition-curve;
@@ -84,7 +84,7 @@
         box-shadow: $box-shadow-light;
         object-fit: cover;
         object-position: top;
-        height: 85%;
+        height: 100%;
         width: 100%;
         filter: brightness(0.6);
         transition: all $transition-speed-fast $transition-curve;

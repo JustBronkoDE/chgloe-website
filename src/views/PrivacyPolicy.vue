@@ -6,7 +6,6 @@
 
 <style lang="scss" scoped>
     .privacy-policy-policy  {
-        height: $height-main-content;
         width: 100%;
     }
 </style>

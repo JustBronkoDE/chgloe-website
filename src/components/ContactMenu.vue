@@ -84,7 +84,7 @@
         background-color: $color-secondary;
         width: 400px;
         height: 100vh;
-        position: absolute;
+        position: sticky;
         right: 0;
         top: 0;
         display: flex;
