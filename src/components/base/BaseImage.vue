@@ -27,7 +27,7 @@
 
         computed: {
             imageInViewport(event: Event) {
-                console.log(event.target);
+                console.log(event);
                 return true;
             },
         },
