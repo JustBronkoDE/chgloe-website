@@ -1,14 +1,10 @@
 <template>
     <section class="gallery">
         <ul class="gallery__categories">
-            <li class="link link--active">All</li>
-            <li class="link">Portraits</li>
-            <li class="link">Scenery</li>
-            <li class="link">Products</li>
-            <li class="link">Couples</li>
+            <li :class="{ 'link--active': selectedCategory === category }" v-for="(category, index) in categories" class="link" :key="index" @click="selectCategory(category)">{{ category }}</li>
         </ul>
         <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
-            <BaseImage modifier="base-image--gallery" :src="image"  v-for="image in imageRow" :key="image" />
+            <BaseImage modifier="base-image--gallery" :src="image.src"  v-for="image in imageRow" :key="image" />
         </div>
     </section>
 </template>
@@ -16,10 +12,19 @@
 <script lang="ts">
     import { defineComponent } from 'vue'
     import BaseImage from '@/components/base/BaseImage.vue'
+    import gallery from '@/assets/gallery.json'
 
     export default defineComponent({
         components: {
             BaseImage,
+        },
+
+        data(){
+            return {
+                categories: gallery.categories,
+                selectedCategory: 'All',
+                gallery: gallery.images
+            }
         },
 
         mounted() {
@@ -32,27 +37,6 @@
         },
 
         computed: {
-            gallery(): any[] {
-                // Only for test purposes
-                const sizes = ['800', '400', '600', '550', '700']
-                // ----
-
-                const gallery = []
-
-                for (let row = 0; row < 5; row++) {
-                    let imageRow = []
-                    for (let column = 0; column < Math.floor(Math.random() * 5) + 2  ; column++) {
-                        // Only for test purposes
-                        const width = sizes[Math.floor(Math.random() * sizes.length)]
-                        const height = sizes[Math.floor(Math.random() * sizes.length)]
-                        // ---
-                        imageRow.push(`https://picsum.photos/${width}/${height}?random=${row}${column}`)
-                    }
-                    gallery.push(imageRow)
-                }
-
-                return gallery;
-            },
             galleryRows(): NodeListOf<Element> {
                 return document.querySelectorAll('.gallery__row')
             }
@@ -79,6 +63,9 @@
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 )
             },
+            selectCategory(category: string) {
+                this.selectedCategory = category;
+            }
         },
     })
 </script>

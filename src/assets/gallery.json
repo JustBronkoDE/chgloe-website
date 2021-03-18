@@ -1,0 +1,99 @@
+{
+    "categories": [
+        "All",
+        "Portraits",
+        "Scenery",
+        "Products",
+        "Couples"
+    ],
+    "images": [
+        [
+            {
+                "alt": null,
+                "category": "Portraits",
+                "src": "https://picsum.photos/200/300.webp?random=1"
+            },
+            {
+                "alt": null,
+                "category": "Portraits",
+                "src": "https://picsum.photos/200/300.webp?random=2"
+            },
+            {
+                "alt": null,
+                "category": "Portraits",
+                "src": "https://picsum.photos/200/300.webp?random=3"
+            },
+            {
+                "alt": null,
+                "category": "Portraits",
+                "src": "https://picsum.photos/200/300.webp?random=4"
+            }
+        ],
+        [
+            {
+                "alt": null,
+                "category": "Scenery",
+                "src": "https://picsum.photos/200/300.webp?random=5"
+            },
+            {
+                "alt": null,
+                "category": "Scenery",
+                "src": "https://picsum.photos/200/300.webp?random=6"
+            },
+            {
+                "alt": null,
+                "category": "Scenery",
+                "src": "https://picsum.photos/200/300.webp?random=7"
+            },
+            {
+                "alt": null,
+                "category": "Scenery",
+                "src": "https://picsum.photos/200/300.webp?random=8"
+            }
+        ],
+        [
+            {
+                "alt": null,
+                "category": "Products",
+                "src": "https://picsum.photos/200/300.webp?random=9"
+            },
+            {
+                "alt": null,
+                "category": "Products",
+                "src": "https://picsum.photos/200/300.webp?random=10"
+            },
+            {
+                "alt": null,
+                "category": "Products",
+                "src": "https://picsum.photos/200/300.webp?random=11"
+            },
+            {
+                "alt": null,
+                "category": "Products",
+                "src": "https://picsum.photos/200/300.webp?random=12"
+            }
+        ],
+        [
+            {
+                "alt": null,
+                "category": "Couples",
+                "src": "https://picsum.photos/200/300.webp?random=13"
+            },
+            {
+                "alt": null,
+                "category": "Couples",
+                "src": "https://picsum.photos/200/300.webp?random=14"
+            },
+            {
+                "alt": null,
+                "category": "Couples",
+                "src": "https://picsum.photos/200/300.webp?random=15"
+            },
+            {
+                "alt": null,
+                "category": "Couples",
+                "src": "https://picsum.photos/200/300.webp?random=16"
+            }
+        ]
+    ]
+}
