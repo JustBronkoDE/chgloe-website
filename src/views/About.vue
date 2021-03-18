@@ -31,8 +31,8 @@
 </template>
 
 <script lang="ts">
-    import BaseImage from '@/components/base/BaseImage.vue';
-    import { defineComponent } from 'vue';
+    import BaseImage from '@/components/base/BaseImage.vue'
+    import { defineComponent } from 'vue'
     
     export default defineComponent({
         name: 'About',

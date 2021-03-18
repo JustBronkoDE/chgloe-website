@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-    import Navigation from './Navigation.vue';
-    import { defineComponent } from 'vue';
+    import Navigation from './Navigation.vue'
+    import { defineComponent } from 'vue'
     
     export default defineComponent({
         name: 'Header',

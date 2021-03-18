@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
-    import BaseImage from '@/components/base/BaseImage.vue';
+    import { defineComponent } from 'vue'
+    import BaseImage from '@/components/base/BaseImage.vue'
 
     export default defineComponent({
         components: {
@@ -36,13 +36,13 @@
         computed: {
             gallery(): any[] {
                 // Only for test purposes
-                const sizes = ['800', '400', '600', '550', '700'];   
+                const sizes = ['800', '400', '600', '550', '700']
                 // ----
 
-                const gallery = [];
+                const gallery = []
 
                 for (let row = 0; row < 5; row++) {
-                    let imageRow = [];
+                    let imageRow = []
                     for (let column = 0; column < Math.floor(Math.random() * 5) + 2  ; column++) {
                         // Only for test purposes
                         const width = sizes[Math.floor(Math.random() * sizes.length)]
@@ -50,25 +50,25 @@
                         // ---
                         imageRow.push(`https://picsum.photos/${width}/${height}?random=${row}${column}`)
                     }
-                    gallery.push(imageRow);
+                    gallery.push(imageRow)
                 }
 
                 return gallery;
             },
             galleryRows(): NodeListOf<Element> {
-                return document.querySelectorAll('.gallery__row');
+                return document.querySelectorAll('.gallery__row')
             }
         },
 
         methods: {
             focusRowInViewport(): void {
-                const galleryRows = this.galleryRows;
+                const galleryRows = this.galleryRows
                 // console.log(galleryRows);
                 for (var i = 0; i < galleryRows.length; i++) {
                     if (this.isElementInViewport(galleryRows[i])) {
-                        galleryRows[i].classList.add('gallery__row--focused');
+                        galleryRows[i].classList.add('gallery__row--focused')
                     } else { 
-                        galleryRows[i].classList.remove('gallery__row--focused');
+                        galleryRows[i].classList.remove('gallery__row--focused')
                     }
                 }
             },
@@ -79,7 +79,7 @@
                     rect.left >= 0 &&
                     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
+                )
             },
         },
     })

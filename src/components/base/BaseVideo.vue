@@ -26,7 +26,7 @@
 
         methods: {
             showVideo() {
-                this.loaded = true;
+                this.loaded = true
             },
         },
     })

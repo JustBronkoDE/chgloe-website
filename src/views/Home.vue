@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts">
-    import { defineComponent } from 'vue';
-    import BaseVideo from '@/components/base/BaseVideo.vue';
+    import { defineComponent } from 'vue'
+    import BaseVideo from '@/components/base/BaseVideo.vue'
 
     export default defineComponent({
         components: {

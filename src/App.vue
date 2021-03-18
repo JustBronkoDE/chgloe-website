@@ -9,9 +9,9 @@
 </template>
 
 <script lang="ts">
-    import Header from '@/components/Header.vue';
-    import ContactMenu from '@/components/ContactMenu.vue';
-    import store from './store';
+    import Header from '@/components/Header.vue'
+    import ContactMenu from '@/components/ContactMenu.vue'
+    import store from './store'
 
     export default {
         name: 'App',

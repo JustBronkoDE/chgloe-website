@@ -27,7 +27,7 @@
 
         methods: {
             showImage() {
-                this.loaded = true;
+                this.loaded = true
             },
         },
     })
