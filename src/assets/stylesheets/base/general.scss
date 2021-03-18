@@ -1,7 +1,7 @@
 html {
     font-size: $font-size-standard-mobile;
     background: $color-background;
-    color: $color-dark;
+    color: $color-primary-dark;
     font-family: $font-family-standard;
     overflow-y: scroll;
   
@@ -25,7 +25,7 @@ html {
   
   a {
     text-decoration: underline;
-    color: $color-dark;
+    color: $color-primary-dark;
   }
   
   a[href^=tel] {
@@ -101,13 +101,13 @@ html {
   // sass-lint:disable no-vendor-prefixes
   ::-moz-selection {
     background: $color-secondary;
-    color: $color-dark;
+    color: $color-primary-dark;
     text-shadow: none;
   }
   
   ::selection {
     background: $color-secondary;
-    color: $color-dark;
+    color: $color-primary-dark;
     text-shadow: none;
   }
   

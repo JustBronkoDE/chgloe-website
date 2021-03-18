@@ -1,14 +1,14 @@
 <template>
     <section class="gallery">
         <ul class="gallery__categories">
-            <li class="gallery__category-filter gallery__category-filter--active">Alle</li>
-            <li class="gallery__category-filter">Portraits</li>
-            <li class="gallery__category-filter">Landschaften</li>
-            <li class="gallery__category-filter">Produkte</li>
-            <li class="gallery__category-filter">Paare</li>
+            <li class="link link--active">Alle</li>
+            <li class="link">Portraits</li>
+            <li class="link">Landschaften</li>
+            <li class="link">Produkte</li>
+            <li class="link">Paare</li>
         </ul>
 
-        <div class="gallery__grid" v-on:scroll.passive="focusRowInViewport">
+        <div class="gallery__grid">
             <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
                 <figure class="gallery__item" v-for="image in imageRow" :key="image">
                     <img class="gallery__image" :src="image" alt="">
@@ -23,7 +23,9 @@
 
     export default defineComponent({
         mounted() {
-            this.focusRowInViewport();
+            this.focusRowInViewport()
+
+            window.addEventListener('scroll', this.focusRowInViewport)
         },
 
         computed: {
@@ -83,44 +85,24 @@
         height: $height-main-content;
         width: 100%;
         position: relative;
-        padding-top: $spacing-l + $spacing-m;
+        animation: fade-in 1s;
     }
 
     .gallery__categories {
         display: flex;
         justify-content: center;
         list-style: none;
-        position: absolute;
-        top: 15px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-    }
+        margin: $spacing-l 0;
 
-    .gallery__category-filter {
-        cursor: pointer;
-        
-        &:not(:last-child) {
-            margin-right: $spacing-standard;
-        }
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    .gallery__category-filter--active {
-        cursor: default;
-        font-weight: bold;
-
-        &:hover {
-            text-decoration: none;
+        li {
+            &:not(:last-child) {
+                margin-right: $spacing-standard;
+            }
         }
     }
 
     .gallery__grid {
         height: 100%;
-        overflow: scroll;
         /* Hide scrollbar for IE, Edge and Firefox */
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
@@ -151,10 +133,6 @@
         filter: brightness(50%);
         padding: 0 ($spacing-l + $spacing-s);
         margin-bottom: $spacing-m;
-
-        &:first-child {
-            margin-top: $spacing-l;   
-        }
 
         &:last-child {
             margin-bottom: $spacing-l;   

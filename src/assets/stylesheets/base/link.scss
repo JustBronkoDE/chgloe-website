@@ -1,9 +1,22 @@
 .link {
     cursor: pointer;
+    text-decoration: none;
     transition: all $transition-speed-fast $transition-curve;
     filter: invert(15%);
 
     &:hover {
         filter: invert(0%);
     }
+}
+
+.link--bright {
+    color: $color-secondary;
+}
+
+.link--active {
+    font-weight: bold;
+}
+
+.link--hover-underline:hover {
+    text-decoration: underline;
 }

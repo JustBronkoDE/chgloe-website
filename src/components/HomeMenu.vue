@@ -1,23 +1,19 @@
 <template>
     <ul class="home-menu">
-        <li class="home-menu__item" @click="openView('about')">
-            <span class="title title--bold title--light">Über mich</span>
+        <li class="home-menu__item" @click="openView('about-me')">
+            <span class="title title--bold title--bright">Über mich</span>
             <video class="home-menu__item-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
                 <source src="@/assets/images/about-me.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </li>
         <li class="home-menu__item" @click="openView('gallery')">
-            <span class="title title--bold title--light">Meine Galerie</span>
+            <span class="title title--bold title--bright">Meine Galerie</span>
             <video class="home-menu__item-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
                 <source src="@/assets/images/gallery.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </li>
-        <!-- <li class="home-menu__item" @click="openView('impress')" @mouseover="setActiveItem('impress')" :class="{'home-menu__item--active': impressIsActive}">
-            <span class="title title--bold title--light">Impressum</span>
-            <img src="@/assets/images/landscape2.jpg" class="home-menu__item-image" />
-        </li> -->
     </ul>
 </template>
 
@@ -44,11 +40,13 @@
         display: flex;
         align-items: center;
         height: 100%;
+        width: 100%;
+        animation: fade-in 1s $transition-curve;
     }
 
     .home-menu__item {
         height: 95%;
-        margin: $spacing-standard;
+        margin-right: $spacing-standard;
         cursor: pointer;
         transition: height $transition-speed-fast $transition-curve;
         text-align: center;
@@ -59,10 +57,6 @@
         position: relative;
         flex: 1 1 0px;
 
-        &:first-child {
-            margin-left: 0;
-        }
-
         &:last-child {
             margin-right: 0;
         }
@@ -71,7 +65,7 @@
             height: 100%;
             
             .home-menu__item-image {
-                filter: brightness(0.8);
+                filter: brightness(0.9);
             }
         }
 
@@ -88,6 +82,6 @@
         height: 85%;
         width: 100%;
         filter: brightness(0.6);
-        transition: filter $transition-speed-fast $transition-curve;
+        transition: all $transition-speed-fast $transition-curve;
     }
 </style>

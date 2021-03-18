@@ -1,7 +1,7 @@
 <template>
     <transition name="slide-right">
-        <aside class="contact-menu" v-show="opened">
-            <span class="contact-menu__toggle" @click="toggleContactMenu()"></span>
+        <aside class="contact-menu" v-show="contactMenu.state.open">
+            <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
             <div class="contact-menu__inner">
                 <div class="contact-menu__header">
                     <h2 class="title title--bold">Kontakt</h2>
@@ -10,8 +10,12 @@
                 <img class="contact-menu__portrait" src="@/assets/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
                 <ul class="contact-menu__list">
                     <h3 class="title title--s title--bold title--spacing-bottom">Per Christopher Gloe</h3>
-                    <li class="contact-menu__list-item">max.mustermann@test.de</li>
-                    <li class="contact-menu__list-item">+49 (0) 1234 567890</li>
+                    <li class="contact-menu__list-item">
+                        <a class="link link--hover-underline" href="mailto:max.mustermann@test.de">max.mustermann@test.de</a>
+                    </li>
+                    <li class="contact-menu__list-item">
+                        <a class="link link--hover-underline" href="tel:+49 (0) 1234 567890">+49 (0) 1234 567890</a>
+                    </li>
                 </ul>
             </div>
             <footer class="footer">
@@ -32,15 +36,7 @@
     import { defineComponent } from 'vue';
     
     export default defineComponent({
-        props: {
-            opened: Boolean
-        },
-
-        methods: {
-            toggleContactMenu() {
-                this.$emit('contactMenuToggle');
-            }
-        },
+        inject: ['contactMenu'],
     })
 </script>
 
@@ -85,7 +81,7 @@
     }
 
     .contact-menu {
-        background-color: $color-light;
+        background-color: $color-secondary;
         width: 400px;
         height: 100vh;
         position: absolute;

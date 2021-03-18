@@ -16,6 +16,7 @@
 
 <style lang="scss" scoped>
     .home {
+        padding-top: $spacing-standard;
         height: $height-main-content;
         width: 100%;
         display: flex;

@@ -1,11 +1,11 @@
-$color-primary: #ffffff;
-$color-secondary: #161719;
-$color-dark: #000000;
-$color-light: #ffffff;
-$color-background: $color-secondary;
+$color-primary: #212121;
+$color-primary-dark: #000000;
+$color-primary-light: #484848;
+$color-secondary: #ffffff;
+$color-background: $color-primary;
 
-$box-shadow-light: 0 0 10px rgba($color-light ,0.16), 0 0 10px rgba($color-light ,0.23);
-$box-shadow-normal: 0 3px 60px -10px rgba($color-light, 0.2);
+$box-shadow-light: 0 0 10px rgba($color-secondary ,0.16), 0 0 10px rgba($color-secondary ,0.23);
+$box-shadow-normal: 0 3px 60px -10px rgba($color-secondary, 0.2);
 
 $font-size-standard-mobile: 17px;
 $font-size-standard: 18px;
@@ -49,9 +49,8 @@ $border-radius-small: 4px;
 $border-radius-medium: 10px;
 $border-radius-large: 20px;
 
-$height-header: 15%;
-$height-main-content: 75%;
-$height-footer: 10%;
+$height-main-content: 90%;
+$height-header: 10%;
 
 
 // Regular Smartphones - for example: iPhone 6/7/8, Samsung Galaxy S9/S10
