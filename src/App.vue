@@ -55,5 +55,6 @@
     .chgloe__inner--darkend {
         filter: brightness(0.5);
         pointer-events: none;
+        overflow: none;
     }
 </style>

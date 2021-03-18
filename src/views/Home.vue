@@ -69,7 +69,11 @@
             height: 100%;
             
             .home__menu-image {
-                filter: brightness(0.9);
+                filter: brightness(0.75);
+            }
+
+            .title {
+                font-size: 2.8rem;
             }
         }
 
@@ -85,7 +89,7 @@
         object-position: top;
         height: 100%;
         width: 100%;
-        filter: brightness(0.6);
+        filter: brightness(0.55);
         transition: all $transition-speed-fast $transition-curve;
     }
 </style>
