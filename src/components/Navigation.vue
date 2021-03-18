@@ -1,6 +1,6 @@
 <template>
     <nav class="navigation">
-        <router-link to="legal-notice" class="link link--bright" href="" rel="noopener noreferrer">
+        <router-link to="legal-notice" class="link link--bright">
             Imprint
         </router-link>
         <a class="link" href="https://www.instagram.com/christopher_gloe/" target="_blank" rel="noopener noreferrer">
