@@ -1,8 +1,10 @@
 .slide-right-enter-active {
+    z-index: $z-index-xxl;
     animation: slide-in-right $transition-speed-normal;
 }
 
 .slide-right-leave-active {
+    z-index: $z-index-xxl;
     animation: slide-in-right $transition-speed-normal reverse;
 }
 

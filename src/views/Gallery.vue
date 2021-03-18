@@ -7,13 +7,10 @@
             <li class="link">Products</li>
             <li class="link">Couples</li>
         </ul>
-
-        <div class="gallery__grid">
-            <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
-                <figure class="gallery__item" v-for="image in imageRow" :key="image">
-                    <img class="gallery__image" :src="image" alt="">
-                </figure>
-            </div>
+        <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
+            <figure class="gallery__item" v-for="image in imageRow" :key="image">
+                <img class="gallery__image" :src="image" alt="">
+            </figure>
         </div>
     </section>
 </template>
@@ -23,13 +20,15 @@
 
     export default defineComponent({
         mounted() {
-            this.focusRowInViewport()
-
             window.addEventListener('scroll', this.focusRowInViewport)
         },
 
+        unmounted() {
+            window.removeEventListener('scroll', this.focusRowInViewport)
+        },
+
         computed: {
-            gallery() {
+            gallery(): any[] {
                 // Only for test purposes
                 const sizes = ['800', '400', '600', '550', '700'];   
                 // ----
@@ -50,29 +49,29 @@
 
                 return gallery;
             },
-            galleryRows() {
+            galleryRows(): NodeListOf<Element> {
                 return document.querySelectorAll('.gallery__row');
             }
         },
 
         methods: {
-            focusRowInViewport() {
+            focusRowInViewport(): void {
                 const galleryRows = this.galleryRows;
-                
+                // console.log(galleryRows);
                 for (var i = 0; i < galleryRows.length; i++) {
                     if (this.isElementInViewport(galleryRows[i])) {
-                        galleryRows[i].classList.add("gallery__row--focused");
+                        galleryRows[i].classList.add('gallery__row--focused');
                     } else { 
-                        galleryRows[i].classList.remove("gallery__row--focused");
+                        galleryRows[i].classList.remove('gallery__row--focused');
                     }
                 }
             },
-            isElementInViewport(element: Element) {
+            isElementInViewport(element: Element): boolean {
                 var rect = element.getBoundingClientRect();
                 return (
                     rect.top >= 0 &&
                     rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 150 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
                     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 );
             },
@@ -104,36 +103,16 @@
         }
     }
 
-    .gallery__grid {        
-        &::before {
-            content: '';
-            position: absolute;
-            height: calc(100% - #{$spacing-l});
-            width: 100%;
-            pointer-events: none;
-            -moz-box-shadow:    inset 0 0 10px $color-background;
-            -webkit-box-shadow: inset 0 0 10px $color-background;
-            box-shadow:         inset 0 0 10px $color-background;
-            z-index: $z-index-m;
-        }
-        
-
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
     .gallery__row {
         transition: all $transition-speed-fast $transition-curve;
         display: flex;
-        height: 80%;
+        max-height: 60vh;
         filter: brightness(50%);
         padding: 0 ($spacing-l + $spacing-s);
         margin-bottom: $spacing-m;
 
         &:last-child {
-            margin-bottom: $spacing-l;   
+            margin-bottom: $height-header;   
         }
     }
 

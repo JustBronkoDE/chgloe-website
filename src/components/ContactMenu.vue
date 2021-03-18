@@ -1,24 +1,24 @@
 <template>
     <transition name="slide-right">
-        <aside class="contact-menu" v-show="contactMenu.state.open">
-            <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
-            <div class="contact-menu__inner">
-                <div class="contact-menu__header">
-                    <h2 class="title title--bold">Contact</h2>
+        <aside class="contact-menu__container" v-show="contactMenu.state.open">
+            <div class="contact-menu">
+                <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
+                <div>
+                    <div class="contact-menu__header">
+                        <h2 class="title title--bold">Contact</h2>
+                    </div>
+                
+                    <img class="contact-menu__portrait" src="@/assets/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
+                    <ul class="contact-menu__list">
+                        <h3 class="title title--s title--bold title--spacing-bottom">Per Christopher Gloe</h3>
+                        <li class="contact-menu__list-item">
+                            <a class="link link--hover-underline" href="mailto:max.mustermann@test.de">max.mustermann@test.de</a>
+                        </li>
+                        <li class="contact-menu__list-item">
+                            <a class="link link--hover-underline" href="tel:+49 (0) 1234 567890">+49 (0) 1234 567890</a>
+                        </li>
+                    </ul>
                 </div>
-            
-                <img class="contact-menu__portrait" src="@/assets/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
-                <ul class="contact-menu__list">
-                    <h3 class="title title--s title--bold title--spacing-bottom">Per Christopher Gloe</h3>
-                    <li class="contact-menu__list-item">
-                        <a class="link link--hover-underline" href="mailto:max.mustermann@test.de">max.mustermann@test.de</a>
-                    </li>
-                    <li class="contact-menu__list-item">
-                        <a class="link link--hover-underline" href="tel:+49 (0) 1234 567890">+49 (0) 1234 567890</a>
-                    </li>
-                </ul>
-            </div>
-            <footer class="footer">
                 <ul class="contact-menu__socials">
                     <a class="link" href="https://www.instagram.com/christopher_gloe/" target="_blank" rel="noopener noreferrer">
                         <img class="icon" src="@/assets/images/logos/facebook.svg" alt="Christopher Gloe Facebook">
@@ -27,7 +27,7 @@
                         <img class="icon" src="@/assets/images/logos/instagram.svg" alt="Christopher Gloe Instagram">
                     </a>
                 </ul>
-            </footer>
+            </div>
         </aside>
     </transition>
 </template>
@@ -80,17 +80,24 @@
         margin-bottom: $spacing-l;
     }
 
+    .contact-menu__container {
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
     .contact-menu {
         background-color: $color-secondary;
         width: 400px;
         height: 100vh;
         position: sticky;
-        right: 0;
-        top: 0;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        top: 0;
         padding: 5% $spacing-standard;
+        z-index: $z-index-xxl;
     }
 
     .contact-menu__list {

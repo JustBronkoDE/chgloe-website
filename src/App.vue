@@ -1,11 +1,10 @@
 <template>
     <div class="chgloe" id="chgloe">
+        <ContactMenu />
         <div class="chgloe__inner" :class="{ 'chgloe__inner--darkend': showOverlay }">
             <Header />
             <router-view />
         </div>
-
-        <ContactMenu />
     </div>
 </template>
 
@@ -37,9 +36,12 @@
 <style lang="scss">
     @import 'assets/stylesheets/main.scss';
 
+    .chgloe {
+        position: relative;
+    }
+
     .chgloe__inner {
         width: 100%;
-        // height: 100vh;
         padding: $spacing-l;
         display: flex;
         flex-direction: column;
