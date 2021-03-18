@@ -1,11 +1,11 @@
 <template>
-    <section class="privacy-policy">
-        Datenschutz
+    <section class="privacy-policy-policy">
+        Privacy Policy
     </section>
 </template>
 
 <style lang="scss" scoped>
-    .privacy-policy  {
+    .privacy-policy-policy  {
         height: $height-main-content;
         width: 100%;
     }

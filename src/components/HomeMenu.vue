@@ -1,14 +1,14 @@
 <template>
     <ul class="home-menu">
         <li class="home-menu__item" @click="openView('about-me')">
-            <span class="title title--bold title--bright">Über mich</span>
+            <span class="title title--bold title--bright">About me</span>
             <video class="home-menu__item-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
                 <source src="@/assets/images/about-me.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </li>
         <li class="home-menu__item" @click="openView('gallery')">
-            <span class="title title--bold title--bright">Meine Galerie</span>
+            <span class="title title--bold title--bright">My Gallery</span>
             <video class="home-menu__item-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
                 <source src="@/assets/images/gallery.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

@@ -1,7 +1,7 @@
 <template>
     <nav class="navigation">
-        <router-link to="impress" class="link link--bright" href="" rel="noopener noreferrer">
-            Impressum
+        <router-link to="legal-notice" class="link link--bright" href="" rel="noopener noreferrer">
+            Imprint
         </router-link>
         <a class="link" href="https://www.instagram.com/christopher_gloe/" target="_blank" rel="noopener noreferrer">
             <img class="icon" src="@/assets/images/logos/facebook.svg" alt="Christopher Gloe Facebook">
@@ -9,7 +9,7 @@
         <a class="link" href="https://www.instagram.com/christopher_gloe/" target="_blank" rel="noopener noreferrer">
             <img class="icon" src="@/assets/images/logos/instagram.svg" alt="Christopher Gloe Instagram">
         </a>
-        <button class="link navigation__contact-menu-toggle" @click="contactMenu.open()">Kontakt</button>
+        <button class="link navigation__contact-menu-toggle" @click="contactMenu.open()">Contact</button>
     </nav>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
     <section class="gallery">
         <ul class="gallery__categories">
-            <li class="link link--active">Alle</li>
+            <li class="link link--active">All</li>
             <li class="link">Portraits</li>
-            <li class="link">Landschaften</li>
-            <li class="link">Produkte</li>
-            <li class="link">Paare</li>
+            <li class="link">Scenery</li>
+            <li class="link">Products</li>
+            <li class="link">Couples</li>
         </ul>
 
         <div class="gallery__grid">

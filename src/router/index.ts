@@ -17,14 +17,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "gallery" */ '../views/Gallery.vue'),
   },
   {
-    path: '/impress',
-    name: 'impress',
-    component: () => import(/* webpackChunkName: "impress" */ '../views/Impress.vue'),
+    path: '/legal-notice',
+    name: 'legal-notice',
+    component: () => import(/* webpackChunkName: "legal-notice" */ '../views/LegalNotice.vue'),
   },
   {
-    path: '/privacy',
-    name: 'privacy',
-    component: () => import(/* webpackChunkName: "privacy" */ '../views/Privacy.vue'),
+    path: '/privacy-policy',
+    name: 'privacy-policy',
+    component: () => import(/* webpackChunkName: "privacy-policy" */ '../views/PrivacyPolicy.vue'),
   },
 ]
 

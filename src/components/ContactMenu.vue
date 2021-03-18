@@ -4,7 +4,7 @@
             <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
             <div class="contact-menu__inner">
                 <div class="contact-menu__header">
-                    <h2 class="title title--bold">Kontakt</h2>
+                    <h2 class="title title--bold">Contact</h2>
                 </div>
             
                 <img class="contact-menu__portrait" src="@/assets/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">

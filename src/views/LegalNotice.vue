@@ -1,11 +1,11 @@
 <template>
-    <section class="impress">
-        Impressum
+    <section class="legal-notice">
+        Legal notice
     </section>
 </template>
 
 <style lang="scss" scoped>
-    .impress {
+    .legal-notice {
         height: $height-main-content;
         width: 100%;
     }
