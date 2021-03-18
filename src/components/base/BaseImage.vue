@@ -1,5 +1,7 @@
 <template>
-    <img class="base-image" @load="showImage" :id="id" :src="src" :alt="alt" v-show="loaded" v-if="initialized">
+    <figure class="base-image" :class="modifier" v-observe-visibility="{ callback: lazyLoadImage, once: true }">
+        <img class="base-image__image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="initializeLoading">
+    </figure>
 </template>
 
 <script lang="ts">
@@ -10,7 +12,7 @@
 
         data() {
             return {
-                initialized: false,
+                initializeLoading: false, 
                 loaded: false,
             }
         },
@@ -24,42 +26,50 @@
                 type: String,
                 default: '',
             },
-            id: {
+            modifier: {
                 type: String,
             }
-        },
-
-        mounted() {
-            this.lazyLoadImage()
         },
 
         methods: {
             showImage() {
                 this.loaded = true
             },
-            lazyLoadImage() {
-                const element = document.getElementById(this.id)
-                console.log(element)
-
-                if (this.elementInViewport(element)) {
-                    this.initalized = true
+            lazyLoadImage(isVisible: boolean) {
+                
+                if (isVisible) {
+                    this.initializeLoading = true
                 }
-            },
-            elementInViewport(element: HTMLElement): boolean {
-                var rect = element.getBoundingClientRect()
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                )
-            },
+            }
         },
     })
 </script>
 
 <style lang="scss" scoped>
-    .base-image {
+    .base-image__image {
         animation: fade-in $transition-speed-slow;
+    }
+
+    .base-image--gallery {
+        flex-grow: 1;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-right: $spacing-m;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: 50% 50%;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            transition: transform $transition-speed-normal $transition-curve;
+
+            &:hover {
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
     }
 </style>

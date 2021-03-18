@@ -8,9 +8,7 @@
             <li class="link">Couples</li>
         </ul>
         <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
-            <figure class="gallery__item" v-for="image in imageRow" :key="image">
-                <BaseImage class="gallery__image" :src="image" :id="index" />
-            </figure>
+            <BaseImage modifier="base-image--gallery" :src="image"  v-for="image in imageRow" :key="image" />
         </div>
     </section>
 </template>
@@ -112,6 +110,7 @@
     .gallery__row {
         transition: all $transition-speed-fast $transition-curve;
         display: flex;
+        min-height: 40vh;
         max-height: 60vh;
         filter: brightness(50%);
         padding: 0 ($spacing-l + $spacing-s);
@@ -132,29 +131,6 @@
 
         &:not(:last-of-type) {
             margin-bottom: $spacing-l;
-        }
-    }
-
-    .gallery__item {
-        flex-grow: 1;
-        overflow: hidden;
-
-        &:not(:last-child) {
-            margin-right: $spacing-m;
-        }
-    }
-
-    .gallery__image {
-        object-fit: cover;
-        object-position: 50% 50%;
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        transition: transform $transition-speed-normal $transition-curve;
-
-        &:hover {
-            transform: scale(1.05);
-            cursor: pointer;
         }
     }
 </style>
