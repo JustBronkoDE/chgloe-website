@@ -1,5 +1,5 @@
 <template>
-    <img class="base-image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="imageInViewport($event)">
+    <img class="base-image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="imageInViewport">
 </template>
 
 <script lang="ts">
@@ -27,7 +27,7 @@
 
         computed: {
             imageInViewport(element: Element) {
-                console.log(element);
+                console.log(element.target);
                 var rect = element.getBoundingClientRect();
                 return (
                     rect.top >= 0 &&
