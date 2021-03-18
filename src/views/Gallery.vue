@@ -9,7 +9,7 @@
         </ul>
         <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
             <figure class="gallery__item" v-for="image in imageRow" :key="image">
-                <img class="gallery__image" :src="image" alt="">
+                <BaseImage class="gallery__image" :src="image" />
             </figure>
         </div>
     </section>
@@ -17,9 +17,15 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+    import BaseImage from '@/components/base/BaseImage.vue';
 
     export default defineComponent({
+        components: {
+            BaseImage,
+        },
+
         mounted() {
+            this.galleryRows[0].classList.add('gallery__row--focused')
             window.addEventListener('scroll', this.focusRowInViewport)
         },
 
@@ -120,11 +126,11 @@
         padding: 0;
         filter: none;
 
-        &:not(:first-child) {
+        &:not(:first-of-type) {
             margin-top: $spacing-l;
         }
 
-        &:not(:last-child) {
+        &:not(:last-of-type) {
             margin-bottom: $spacing-l;
         }
     }

@@ -7,8 +7,7 @@
                     <div class="contact-menu__header">
                         <h2 class="title title--bold">Contact</h2>
                     </div>
-                
-                    <img class="contact-menu__portrait" src="@/assets/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
+                    <img class="contact-menu__portrait" src="/media/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
                     <ul class="contact-menu__list">
                         <h3 class="title title--s title--bold title--spacing-bottom">Per Christopher Gloe</h3>
                         <li class="contact-menu__list-item">
@@ -36,6 +35,7 @@
     import { defineComponent } from 'vue';
     
     export default defineComponent({
+        name: 'ContactMenu',
         inject: ['contactMenu'],
     })
 </script>

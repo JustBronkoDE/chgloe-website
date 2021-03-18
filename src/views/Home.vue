@@ -3,17 +3,11 @@
         <ul class="home__menu">
             <li class="home__menu-item" @click="openView('about-me')">
                 <span class="title title--bold title--bright">About me</span>
-                <video class="home__menu-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
-                    <source src="@/assets/images/about-me.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <BaseVideo class="home__menu-image" src="/media/videos/about-me.mp4"/>
             </li>
             <li class="home__menu-item" @click="openView('gallery')">
                 <span class="title title--bold title--bright">My Gallery</span>
-                <video class="home__menu-image" loop muted preload="metadata" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()">
-                    <source src="@/assets/images/gallery.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <BaseVideo class="home__menu-image" src="/media/videos/gallery.mp4"/>
             </li>
         </ul>
     </main>
@@ -21,8 +15,13 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+    import BaseVideo from '@/components/base/BaseVideo.vue';
 
     export default defineComponent({
+        components: {
+            BaseVideo,
+        },
+
         methods: {
             openView(view: string) {
                 this.$router.push(view)
