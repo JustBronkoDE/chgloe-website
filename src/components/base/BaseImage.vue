@@ -1,5 +1,5 @@
 <template>
-    <img class="base-image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="imageInViewport($event.element)">
+    <img class="base-image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="imageInViewport($event.target)">
 </template>
 
 <script lang="ts">
