@@ -61,6 +61,10 @@
         position: relative;
         flex: 1 1 0px;
 
+        .title {
+            pointer-events: none;
+        }
+
         &:last-child {
             margin-right: 0;
         }
