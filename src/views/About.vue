@@ -46,7 +46,6 @@
     .about {
         margin: 0 auto;
         max-width: 50%;
-        height: $height-home;
         display: flex;
         justify-content: center;
         flex-direction: column;

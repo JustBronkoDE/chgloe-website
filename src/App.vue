@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
     import Header from '@/components/Header.vue';
     import ContactMenu from '@/components/ContactMenu.vue';
     import store from './store';
@@ -47,7 +47,7 @@
         flex-direction: column;
         transition: filter $transition-speed-normal $transition-curve;
         color: $color-secondary;
-        max-width: 1920px;
+        max-width: 1400px;
         margin: 0 auto;
         position: relative;
     }
