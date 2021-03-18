@@ -1,5 +1,5 @@
 <template>
-    <img class="base-image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="imageInViewport">
+    <img class="base-image" @load="showImage" :id="id" :src="src" :alt="alt" v-show="loaded" v-if="initialized">
 </template>
 
 <script lang="ts">
@@ -10,6 +10,7 @@
 
         data() {
             return {
+                initialized: false,
                 loaded: false,
             }
         },
@@ -22,19 +23,43 @@
             alt: {
                 type: String,
                 default: '',
+            },
+            id: {
+                type: String,
             }
         },
 
         computed: {
             imageInViewport(event: Event) {
-                console.log(event);
-                return true;
+                console.log(event.target);
+                
             },
+        },
+
+        mounted() {
+            this.lazyLoadImage()
         },
 
         methods: {
             showImage() {
                 this.loaded = true
+            },
+            lazyLoadImage() {
+                const element = document.getElementById(this.id)
+                console.log(element)
+
+                if (this.elementInViewport(element)) {
+                    this.initalized = true
+                }
+            },
+            elementInViewport(element: HTMLElement): boolean {
+                var rect = element.getBoundingClientRect()
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                )
             },
         },
     })

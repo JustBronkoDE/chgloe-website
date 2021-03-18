@@ -9,7 +9,7 @@
         </ul>
         <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
             <figure class="gallery__item" v-for="image in imageRow" :key="image">
-                <BaseImage class="gallery__image" :src="image" />
+                <BaseImage class="gallery__image" :src="image" :id="index" />
             </figure>
         </div>
     </section>
@@ -65,14 +65,14 @@
                 const galleryRows = this.galleryRows
                 // console.log(galleryRows);
                 for (var i = 0; i < galleryRows.length; i++) {
-                    if (this.isElementInViewport(galleryRows[i])) {
+                    if (this.elementInViewport(galleryRows[i])) {
                         galleryRows[i].classList.add('gallery__row--focused')
                     } else { 
                         galleryRows[i].classList.remove('gallery__row--focused')
                     }
                 }
             },
-            isElementInViewport(element: Element): boolean {
+            elementInViewport(element: Element): boolean {
                 var rect = element.getBoundingClientRect();
                 return (
                     rect.top >= 0 &&
