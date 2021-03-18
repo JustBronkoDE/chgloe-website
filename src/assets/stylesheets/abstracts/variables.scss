@@ -4,8 +4,8 @@ $color-primary-light: #484848;
 $color-secondary: #ffffff;
 $color-background: $color-primary;
 
-$box-shadow-light: 0 0 10px rgba($color-secondary ,0.16), 0 0 10px rgba($color-secondary ,0.23);
-$box-shadow-normal: 0 3px 60px -10px rgba($color-secondary, 0.2);
+$box-shadow-light: 0 0 10px rgba($color-primary-light ,0.16), 0 0 10px rgba($color-primary-light ,0.23);
+$box-shadow-normal: 0 3px 60px -10px rgba($color-primary-light, 0.2);
 
 $font-size-standard-mobile: 17px;
 $font-size-standard: 18px;
