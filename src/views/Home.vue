@@ -3,11 +3,11 @@
         <ul class="home__menu">
             <li class="home__menu-item" @click="openView('about-me')">
                 <span class="title title--bold title--bright">About me</span>
-                <BaseVideo class="home__menu-image" src="/media/videos/about-me.mp4"/>
+                <BaseVideo loop muted autoplay class="home__menu-image" src="/media/videos/about-me.mp4"/>
             </li>
             <li class="home__menu-item" @click="openView('gallery')">
                 <span class="title title--bold title--bright">My Gallery</span>
-                <BaseVideo class="home__menu-image" src="/media/videos/gallery.mp4"/>
+                <BaseVideo loop muted autoplay class="home__menu-image" src="/media/videos/gallery.mp4"/>
             </li>
         </ul>
     </main>
