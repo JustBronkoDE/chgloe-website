@@ -1,5 +1,5 @@
 <template>
-    <video class="base-video__video" preload="metadata" @loadedmetadata="showVideo" @mouseover="$event.target.play()" @mouseleave="$event.target.pause()" v-show="loaded">
+    <video class="base-video__video" preload="metadata" @loadedmetadata="showVideo" v-show="loaded">
         <source :src="src" type="video/mp4" />
         Your browser does not support the video tag.
     </video>
