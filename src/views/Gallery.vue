@@ -4,26 +4,30 @@
             <li :class="{ 'link--active': selectedCategory === category }" v-for="(category, index) in categories" class="link" :key="index" @click="selectCategory(category)">{{ category }}</li>
         </ul>
         <div class="gallery__row" v-for="(imageRow, index) in filteredGallery" :key="index">
-            <BaseImage modifier="base-image--gallery" :src="image.src"  v-for="image in imageRow" :key="image" />
+            <BaseImage modifier="base-image--gallery" :src="image.src"  v-for="image in imageRow" :key="image" @click="selectImage(image)" />
         </div>
+        <Lightbox :image="selectedImage" @closeLightbox="selectImage(null)" />
     </section>
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue'
     import BaseImage from '@/components/base/BaseImage.vue'
+    import Lightbox from '@/components/Lightbox.vue'
     import gallery from '@/assets/gallery.json'
 
     export default defineComponent({
         components: {
             BaseImage,
+            Lightbox,
         },
 
         data(){
             return {
                 categories: gallery.categories,
                 selectedCategory: 'All',
-                gallery: gallery.images
+                gallery: gallery.images,
+                selectedImage: null,
             }
         },
 
@@ -77,6 +81,9 @@
             selectCategory(category: string) {
                 this.selectedCategory = category
                 this.focusRowInViewport()
+            },
+            selectImage(image: Object|null) {
+                this.selectedImage = image as any
             }
         },
     })

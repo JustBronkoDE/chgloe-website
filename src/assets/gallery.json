@@ -9,88 +9,88 @@
     "images": [
         [
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Portraits",
-                "src": "https://picsum.photos/seed/bhzsaf/200/300.webp"
+                "src": "https://picsum.photos/seed/bhzsaf/800/600.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Portraits",
-                "src": "https://picsum.photos/seed/345g32/200/300.webp"
+                "src": "https://picsum.photos/seed/345g32/800/600.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Portraits",
-                "src": "https://picsum.photos/seed/fgdfjj/200/300.webp"
+                "src": "https://picsum.photos/seed/fgdfjj/800/600.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Portraits",
-                "src": "https://picsum.photos/seed/3h35df/200/300.webp"
+                "src": "https://picsum.photos/seed/3h35df/800/600.webp"
             }
         ],
         [
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Scenery",
                 "src": "https://picsum.photos/seed/34tfhf/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Scenery",
                 "src": "https://picsum.photos/seed/3g34g3/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Scenery",
                 "src": "https://picsum.photos/seed/dfh76k/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Scenery",
                 "src": "https://picsum.photos/seed/dfh54j/200/300.webp"
             }
         ],
         [
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Products",
                 "src": "https://picsum.photos/seed/g56h33/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Products",
                 "src": "https://picsum.photos/seed/j6734356/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Products",
                 "src": "https://picsum.photos/seed/h36h356f/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Products",
                 "src": "https://picsum.photos/seed/245242gh/200/300.webp"
             }
         ],
         [
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Couples",
                 "src": "https://picsum.photos/seed/dfagadf/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Couples",
                 "src": "https://picsum.photos/seed/zujkku/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Couples",
                 "src": "https://picsum.photos/seed/77uk65/200/300.webp"
             },
             {
-                "alt": null,
+                "alt": "Some text",
                 "category": "Couples",
                 "src": "https://picsum.photos/seed/swhrth45/200/300.webp"
             }

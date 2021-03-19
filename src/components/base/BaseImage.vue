@@ -1,6 +1,7 @@
 <template>
     <figure class="base-image" :class="modifier" v-observe-visibility="{ callback: lazyLoadImage, once: true }">
         <img class="base-image__image" @load="showImage" :src="src" :alt="alt" v-show="loaded" v-if="initializeLoading">
+        <p v-if="alt && showCaption && loaded" class="base-image__caption">{{ alt }}</p>
     </figure>
 </template>
 
@@ -20,7 +21,7 @@
         props: {
             src: {
                 type: String,
-                required: true
+                required: true,
             },
             alt: {
                 type: String,
@@ -28,7 +29,11 @@
             },
             modifier: {
                 type: String,
-            }
+            },
+            showCaption: {
+                type: Boolean,
+                default: false,
+            },
         },
 
         methods: {
@@ -46,8 +51,21 @@
 </script>
 
 <style lang="scss" scoped>
-    .base-image__image {
+    .base-image {
         animation: fade-in $transition-speed-slow;
+    }
+
+    .base-image__image {
+        height: 100%;
+        width: 100%;
+        animation: fade-in $transition-speed-slow;
+    }
+
+    .base-image__caption {
+        font-size: $font-size-xl;
+        color: $color-secondary;
+        margin-top: $spacing-s;
+        text-align: center;
     }
 
     .base-image--gallery {
@@ -62,8 +80,6 @@
             object-fit: cover;
             object-position: 50% 50%;
             overflow: hidden;
-            height: 100%;
-            width: 100%;
             transition: transform $transition-speed-normal $transition-curve;
 
             &:hover {
