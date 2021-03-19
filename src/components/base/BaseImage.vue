@@ -52,8 +52,6 @@
 
 <style lang="scss" scoped>
     .base-image__image {
-        height: 100%;
-        width: 100%;
         animation: fade-in $transition-speed-slow;
     }
 
@@ -74,6 +72,8 @@
         }
 
         img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             object-position: 50% 50%;
             overflow: hidden;
@@ -84,5 +84,11 @@
                 cursor: pointer;
             }
         }
+    }
+
+    .base-image--lightbox img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
     }
 </style>

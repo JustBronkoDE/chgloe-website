@@ -2,7 +2,7 @@
     <teleport to=".chgloe" v-if="image">
         <div class="lightbox">
             <div class="lightbox__inner" @click="closeLightbox">
-                <BaseImage class="lightbox__image" :src="image.src" :alt="image.alt" showCaption/>
+                <BaseImage class="lightbox__image" modifier="base-image--lightbox" :src="image.src" :alt="image.alt" showCaption/>
             </div>
         </div>
     </teleport>
