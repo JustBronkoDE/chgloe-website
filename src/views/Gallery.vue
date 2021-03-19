@@ -3,7 +3,7 @@
         <ul class="gallery__categories">
             <li :class="{ 'link--active': selectedCategory === category }" v-for="(category, index) in categories" class="link" :key="index" @click="selectCategory(category)">{{ category }}</li>
         </ul>
-        <div class="gallery__row" v-for="(imageRow, index) in gallery" :key="index">
+        <div class="gallery__row" v-for="(imageRow, index) in filteredGallery" :key="index">
             <BaseImage modifier="base-image--gallery" :src="image.src"  v-for="image in imageRow" :key="image" />
         </div>
     </section>
@@ -39,13 +39,24 @@
         computed: {
             galleryRows(): NodeListOf<Element> {
                 return document.querySelectorAll('.gallery__row')
+            },
+            filteredGallery(): Array<any> {
+                let gallery = this.gallery
+
+                if (this.selectedCategory !== 'All') {
+                    gallery = []
+                    for (let row = 0; row < this.gallery.length; row++) {
+                        gallery.push(this.gallery[row].filter(image => image.category === this.selectedCategory))
+                    }
+                }
+
+                return gallery
             }
         },
 
         methods: {
             focusRowInViewport(): void {
                 const galleryRows = this.galleryRows
-                // console.log(galleryRows);
                 for (var i = 0; i < galleryRows.length; i++) {
                     if (this.elementInViewport(galleryRows[i])) {
                         galleryRows[i].classList.add('gallery__row--focused')
@@ -64,7 +75,8 @@
                 )
             },
             selectCategory(category: string) {
-                this.selectedCategory = category;
+                this.selectedCategory = category
+                this.focusRowInViewport()
             }
         },
     })
@@ -106,13 +118,17 @@
         &:last-child {
             margin-bottom: $height-header;   
         }
+
+        &:empty {
+            display: none; 
+        }
     }
 
     .gallery__row--focused {
         padding: 0;
         filter: none;
 
-        &:not(:first-of-type) {
+        &:not(:first-of-type) &:not(:nth-child(1)) {
             margin-top: $spacing-l;
         }
 
