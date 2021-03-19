@@ -51,10 +51,6 @@
 </script>
 
 <style lang="scss" scoped>
-    .base-image {
-        animation: fade-in $transition-speed-slow;
-    }
-
     .base-image__image {
         height: 100%;
         width: 100%;
@@ -66,6 +62,7 @@
         color: $color-secondary;
         margin-top: $spacing-s;
         text-align: center;
+        animation: fade-in $transition-speed-slow;
     }
 
     .base-image--gallery {
