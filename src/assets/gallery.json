@@ -10,7 +10,7 @@
     "images": [
         [
             {
-                "alt": "A bad big caption",
+                "alt": null,
                 "category": "Portraits",
                 "src": "https://picsum.photos/seed/bhzsaf/800/600.webp"
             },
