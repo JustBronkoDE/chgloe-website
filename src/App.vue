@@ -4,6 +4,7 @@
         <div class="chgloe__inner" :class="{ 'chgloe__inner--darkend': showOverlay }">
             <Header />
             <router-view />
+            <Footer />
         </div>
     </div>
 </template>
@@ -11,6 +12,7 @@
 <script lang="ts">
     import Header from '@/components/Header.vue'
     import ContactMenu from '@/components/ContactMenu.vue'
+    import Footer from '@/components/Footer.vue'
     import store from './store'
 
     export default {
@@ -23,6 +25,7 @@
         components: {
             Header,
             ContactMenu,
+            Footer,
         },
 
         computed: {
