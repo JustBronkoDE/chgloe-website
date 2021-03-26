@@ -65,6 +65,7 @@
         flex: 1 1 0px;
 
         @include breakpoint('s') {
+            max-height: none;
             height: 80%;
             margin-bottom: 0;
             margin-right: $spacing-standard;
