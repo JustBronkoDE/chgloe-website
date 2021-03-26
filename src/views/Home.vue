@@ -54,7 +54,7 @@
     }
 
     .home__menu-item {
-        height: 50%;
+        max-height: 50%;
         margin-bottom: $spacing-m;
         text-align: center;
         text-decoration: none;
