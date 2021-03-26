@@ -136,8 +136,10 @@
         padding: 0 ($spacing-l + $spacing-s);
         margin-bottom: $spacing-m;
 
-        &:last-child {
-            margin-bottom: $height-header;   
+        @include breakpoint('s') {
+            &:last-child {
+                margin-bottom: $height-header;   
+            }
         }
 
         &:empty {
