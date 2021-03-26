@@ -1,5 +1,5 @@
 <template>
-    <div class="chgloe" id="chgloe">
+    <div class="chgloe" :class="{ 'chgloe--disable-scroll': showOverlay }" id="chgloe">
         <ContactMenu />
         <div class="chgloe__inner" :class="{ 'chgloe__inner--darkend': showOverlay }">
             <Header />
@@ -40,9 +40,14 @@
         position: relative;
     }
 
+    .chgloe--disable-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+
     .chgloe__inner {
         width: 100%;
-        padding: $spacing-l;
+        padding: $spacing-l $spacing-m;
         display: flex;
         flex-direction: column;
         transition: filter $transition-speed-normal $transition-curve;
@@ -50,11 +55,14 @@
         max-width: 1400px;
         margin: 0 auto;
         position: relative;
+
+        @include breakpoint('s') {
+            padding: $spacing-l;
+        }
     }
 
     .chgloe__inner--darkend {
         filter: brightness(0.5);
         pointer-events: none;
-        overflow: none;
     }
 </style>

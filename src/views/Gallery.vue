@@ -101,14 +101,28 @@
         background-color: $color-background;
         z-index: $z-index-s;
         position: sticky;
-        display: flex;
-        justify-content: center;
         list-style: none;
-        padding: $spacing-l 0;
+        padding-top: $spacing-m;
+        padding-bottom: $spacing-s;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
         li {
-            &:not(:last-child) {
-                margin-right: $spacing-standard;
+            display: inline-block;
+            margin-bottom: $spacing-s;
+        }
+
+        @include breakpoint('s') {
+            padding: $spacing-l 0;
+            justify-content: center;
+
+            li {
+                margin-bottom: 0;
+                &:not(:first-child) {
+                    margin-left: $spacing-standard;
+                }
             }
         }
     }

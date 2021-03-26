@@ -1,8 +1,5 @@
 <template>
     <nav class="navigation">
-        <router-link to="legal-notice" class="link link--bright">
-            Imprint
-        </router-link>
         <a class="link" href="https://www.instagram.com/christopher_gloe/" target="_blank" rel="noopener noreferrer">
             <img class="icon" src="@/assets/images/logos/facebook.svg" alt="Christopher Gloe Facebook">
         </a>

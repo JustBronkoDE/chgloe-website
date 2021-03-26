@@ -2,10 +2,10 @@
     <transition name="slide-right">
         <aside class="contact-menu__container" v-show="contactMenu.state.open">
             <div class="contact-menu">
-                <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
-                <div>
+                <div class="contact-menu__inner">
                     <div class="contact-menu__header">
                         <h2 class="title title--bold">Contact</h2>
+                        <span class="contact-menu__toggle" @click="contactMenu.close()"></span>
                     </div>
                     <img class="contact-menu__portrait" src="/media/images/portrait.jpg" alt="Portrait von Per Christopher Gloe">
                     <ul class="contact-menu__list">
@@ -43,9 +43,7 @@
 <style lang="scss" scoped>
     .contact-menu__toggle {
         cursor: pointer;
-        position: absolute;
-        top: $spacing-standard;
-        right: $spacing-standard;
+        position: relative;
         width: 40px;
         height: 40px;
         transition: all $transition-speed-fast;
@@ -77,20 +75,32 @@
     }
 
     .contact-menu__header {
-        margin-bottom: $spacing-l;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing-m;
+
+        @include breakpoint('s') {
+            margin-bottom: $spacing-l;
+        }
     }
 
     .contact-menu__container {
-        height: 100%;
+        height: 100vh;
+        width: 100vw;
+        overflow: scroll;
         position: absolute;
-        right: 0;
-        top: 0;
+        
+        @include breakpoint('s') {
+            height: 100vh;
+            width: auto;
+            top: 0;
+            right: 0;
+        }
     }
 
     .contact-menu {
         background-color: $color-secondary;
-        width: 400px;
-        height: 100vh;
         position: sticky;
         display: flex;
         justify-content: space-between;
@@ -98,6 +108,11 @@
         top: 0;
         padding: 5% $spacing-standard;
         z-index: $z-index-xxl;
+
+        @include breakpoint('s') {
+            width: 400px;
+            height: 100vh;
+        }
     }
 
     .contact-menu__list {
@@ -116,6 +131,7 @@
         height: 50px;
         display: flex;
         justify-content: center;
+        margin-top: $spacing-l;
 
         .icon {
             width: 50px;

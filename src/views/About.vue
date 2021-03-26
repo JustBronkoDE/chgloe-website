@@ -45,7 +45,7 @@
 <style lang="scss" scoped>
     .about {
         margin: 0 auto;
-        max-width: 50%;
+        max-width: 800px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -54,10 +54,10 @@
 
     .about__text {
         hyphens: auto;
-        text-align: justify;
 
         p {
             margin-bottom: $spacing-xs + $spacing-s;
+            text-align: justify;
         }
     }
 

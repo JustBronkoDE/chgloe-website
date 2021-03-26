@@ -24,10 +24,17 @@
         height: $height-header;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: $spacing-m;
         border-bottom: 1px #fff solid;
+        flex-direction: column;
+
+        @include breakpoint('s') {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
     }
 
     .header__logo {
@@ -35,6 +42,12 @@
     }
 
     .header__link {
-        height: 100%;
+        height: 80%;
+        margin-bottom: $spacing-xs;
+
+        @include breakpoint('s') {
+            height: 100%;
+            margin-bottom: 0;
+        }
     }
 </style>

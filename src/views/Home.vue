@@ -46,13 +46,16 @@
         height: 100%;
         width: 100%;
         animation: fade-in 1s $transition-curve;
+        flex-direction: column;
+
+        @include breakpoint('s') {
+            flex-direction: row;
+        }
     }
 
     .home__menu-item {
-        height: 80%;
-        margin-right: $spacing-standard;
-        cursor: pointer;
-        transition: height $transition-speed-fast $transition-curve;
+        height: 50%;
+        margin-bottom: $spacing-m;
         text-align: center;
         text-decoration: none;
         display: flex;
@@ -61,24 +64,32 @@
         position: relative;
         flex: 1 1 0px;
 
-        .title {
-            pointer-events: none;
+        @include breakpoint('s') {
+            height: 80%;
+            margin-bottom: 0;
+            margin-right: $spacing-standard;
+            cursor: pointer;
+            transition: height $transition-speed-fast $transition-curve;
+
+            &:hover {
+                height: 100%;
+                
+                .home__menu-image {
+                    filter: brightness(0.75);
+                }
+
+                .title {
+                    font-size: 2.8rem;
+                }
+            }
         }
 
         &:last-child {
-            margin-right: 0;
+            margin: 0;
         }
 
-        &:hover {
-            height: 100%;
-            
-            .home__menu-image {
-                filter: brightness(0.75);
-            }
-
-            .title {
-                font-size: 2.8rem;
-            }
+        .title {
+            pointer-events: none;
         }
 
         .title {
