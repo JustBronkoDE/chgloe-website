@@ -42,6 +42,7 @@
     }
 
     .header__link {
+        display: block;
         height: 80%;
         margin-bottom: $spacing-xs;
 
