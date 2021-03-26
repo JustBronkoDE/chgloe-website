@@ -4,7 +4,7 @@
         <div class="chgloe__inner" :class="{ 'chgloe__inner--darkend': showOverlay }">
             <Header />
             <router-view />
-            <Footer />
+            <Footer v-if="false" />
         </div>
     </div>
 </template>
