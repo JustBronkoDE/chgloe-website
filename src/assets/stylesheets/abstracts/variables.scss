@@ -74,9 +74,6 @@ $breakpoint-xl: 1290px;
 // Desktop Computer - for example: Apple iMac 27'
 $breakpoint-xxl: 1600px;
 
-// Element specific breakpoints
-$breakpoint-help: 1800px;
-
 // Is used by breakpoint manager
 $breakpoints: (
   'xxs': (min-width: $breakpoint-xxs),
@@ -85,8 +82,7 @@ $breakpoints: (
   'm': (min-width: $breakpoint-m),
   'l': (min-width: $breakpoint-l),
   'xl': (min-width: $breakpoint-xl),
-  'xxl': (min-width: $breakpoint-xxl),
-  'help': (min-width: $breakpoint-help)
+  'xxl': (min-width: $breakpoint-xxl)
 );
 
 // Export for javascript
@@ -98,5 +94,4 @@ $breakpoints: (
   l: $breakpoint-l;
   xl: $breakpoint-xl;
   xxl: $breakpoint-xxl;
-  help: $breakpoint-help;
 }

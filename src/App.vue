@@ -55,12 +55,16 @@
         flex-direction: column;
         transition: filter $transition-speed-normal $transition-curve;
         color: $color-secondary;
-        max-width: 1400px;
+        max-width: $breakpoint-xl;
         margin: 0 auto;
         position: relative;
 
         @include breakpoint('s') {
             padding: $spacing-l;
+        }
+
+        @include breakpoint('xxl') {
+            max-width: 80%;
         }
     }
 
